@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServerInMemory", "AuthServerInMemory\AuthServerInMemory.csproj", "{29DD94CC-CAF1-4447-BD88-9B355D0D7D58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServerInMemory", "AuthServerInMemory\AuthServerInMemory.csproj", "{29DD94CC-CAF1-4447-BD88-9B355D0D7D58}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EDBAAB21-10A6-468E-94B0-9826FA1BEFF2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5215A400-ED0C-406F-90A8-BEF8EA7B7040}"
 	ProjectSection(SolutionItems) = preProject
 		ReadMe.MD = ReadMe.MD
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pictures", "pictures", "{E431DF0C-78F8-4FCB-AC63-6FE362F8A052}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Pictures\1.png = ..\..\..\Pictures\1.png
 	EndProjectSection
 EndProject
 Global
@@ -29,6 +34,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E431DF0C-78F8-4FCB-AC63-6FE362F8A052} = {5215A400-ED0C-406F-90A8-BEF8EA7B7040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01DCF03C-DA14-4174-9CAA-0B7FEEBC64E0}

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  authserverinmemory:
+    image: ${DOCKER_REGISTRY}authserverinmemory
+    build:
+      context: .
+      dockerfile: AuthServerInMemory/Dockerfile

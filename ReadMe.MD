@@ -81,5 +81,34 @@ services.AddIdentityServer()
 ``` 
 6. 启动服务，使用PostMan 验证：
 
+   请求方式  |   调用地址                                 | 参数          |  值
+-----       | ------
+POST        | http://localhost:5000/connect/token       | client_id     | Album
+|           |                                           | client_secret | secret
+|           |                                           | grant_type    | client_credentials
 
 
+**grant_type如果使用password , 需要添加 username 和 password 这两个参数，使用正确的用户名和密码来获取token**
+  
+   参数  |   值
+-------- | ----------
+username  |  asdf
+password  |  123456
+
+7. 添加UI
+ - 在项目根目录，打开Powershell，输入命令,就把UI下载到项目了.
+	```
+	iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/IdentityServer/IdentityServer4.Quickstart.UI/release/get.ps1'))
+	```
+ - 由于有wwwroot下很多静态文件, 所以asp.net core 需要启用服务静态文件的功能: 修改Startup的Configure方法:
+	```
+		app.UseStaticFiles();
+		app.UseMvcWithDefaultRoute();
+	```
+ - 在ConfigureServices里面注册MVC:
+	```
+	services.AddMvc();
+	```
+8. 运行程序，并使用设定的用户进行登录
+
+                                                        

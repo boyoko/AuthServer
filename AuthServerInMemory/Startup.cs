@@ -21,6 +21,8 @@ namespace AuthServerInMemory
                 .AddTestUsers(InMemoryConfiguration.Users().ToList())
                 .AddInMemoryClients(InMemoryConfiguration.Clients())
                 .AddInMemoryApiResources(InMemoryConfiguration.ApiResources());
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -31,10 +33,14 @@ namespace AuthServerInMemory
                 app.UseDeveloperExceptionPage();
             }
             app.UseIdentityServer();
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World!");
+            //});
+            app.UseStaticFiles();
+            app.UseMvcWithDefaultRoute();
+
+            
         }
     }
 }

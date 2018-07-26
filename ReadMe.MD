@@ -82,8 +82,8 @@ services.AddIdentityServer()
 6. 启动服务，使用PostMan 验证：
 
    请求方式  |   调用地址                                 | 参数          |  值
------       | ------
-POST        | http://localhost:5000/connect/token       | client_id     | Album
+-----       | ------------------------------------------|---------------|-----
+|POST       | http://localhost:5000/connect/token       | client_id     | Album
 |           |                                           | client_secret | secret
 |           |                                           | grant_type    | client_credentials
 
